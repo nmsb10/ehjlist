@@ -1,0 +1,90 @@
+{{#with business}}
+{{!-- {{#each business}} --}}
+	<div class = 'fit-90' id='eliminate-whitespace'>
+		<div id = 'primary-business-info'>
+			<div id = 'business-name'>{{biz_name}}</div>
+			<br>
+			<div id = 'business-image'></div>
+			<div id='individual-business-map'>
+				{{#if biz_lat}}
+				 <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{biz_lat}},{{biz_long}}&amp;key=AIzaSyCHIwflHyQ2bFuxjJFZ-6kWdy-SBLyxBfs"></iframe>
+				{{/if}}
+			</div>
+			<div id = 'business-information'>
+				<div class = 'business-attribute'>
+					<span class = 'desc-label'>category:</span>
+					<span class = 'desc-content'>{{biz_cat}}</span>
+				</div>
+				<div class = 'business-attribute'>
+					<span class = 'desc-label'>address:</span>
+					<span class = 'desc-content' id='transform-address'>{{biz_street}}, {{biz_city}}, {{biz_state}}</span>
+				</div>
+				<div class = 'business-attribute'>
+					<span class = 'desc-label'>what we do:</span>
+					<span class = 'desc-content'>{{biz_desc}}</span>
+				</div>
+				<div class = 'business-create-update'>
+					<span class = 'desc-label-cu'>listing created at:</span>
+					<span class = 'desc-content-cu'>{{createdAt}}</span>
+				</div>
+				<div class = 'business-create-update'>
+					<span class = 'desc-label-cu'>listing updated at:</span>
+					<span class = 'desc-content-cu'>{{updatedAt}}</span>
+				</div>
+				<form class = 'ind-business-action' id = 'edit-business-info'>
+					<button class = 'edit-business-info-button'>edit info</button>
+				</form>
+				<form class = 'ind-business-action' id = 'create-deal' action = '/create/offer/{{id}}' method = 'GET'> 
+				<!--<form id = 'create-deal' action = '/api/offers/new/{{id}}' method = 'GET'>-->
+					<button class = 'edit-business-info-button' id='deal-button' type = 'submit' title = 'create deal'>create deal</button>
+				</form>
+			</div>
+			<br>
+		</div>
+		<div id = 'deal-container-ind'><div id='deal-container-head'>current deals for<br><span id = 'bus-name-deals'>{{biz_name}}</span></div>
+			<!-- <div class = 'deal-panel'>
+				<div class = 'deal-panel-header'>
+					<div class = 'limited-time-container'>
+						<div class= 'cornered-text-days cornered-text'>5</div>
+						<div class= 'cornered-text-words cornered-text'>days left<br>to purchase</div>
+						<div class="cornered corner"></div>
+						<div class="cornered2 corner"></div>
+					</div>
+				</div>
+				<div class = 'deal-panel-content'>
+					<span class = 'deal-title-content'>amazing experience</span>
+					<div class = 'deal-desc-div reg-price'>
+						<span class = 'deal-label'>regular price: </span>
+						<span class = 'deal-regprice-content'>$50.00</span>
+					</div>
+					<div class = 'deal-desc-div'>
+						<span class = 'deal-label dl-dealprice'>NOW:</span>
+						<span class = 'deal-dealprice-content'>$19.99</span>
+					</div>
+					<div class = 'deal-desc-div ddd-cu'>
+						<span class = 'deal-label dl-cu'>deal created at: </span>
+						<span class = 'deal-created-content dl-cu'>date date date</span>
+					</div>
+					<div class = 'deal-desc-div ddd-cu'>
+						<span class = 'deal-label dl-cu'>deal updated at: </span>
+						<span class = 'deal-updated-content dl-cu'>date date date</span>
+					</div>
+				</div>
+			</div> -->
+			{{#each offers}}
+
+			<div class="offerResult">
+				<p class="offerName">{{this.offer_title}}</p>
+				<p class="origPrice">Original Price: {{this.offer_origPrice}}</p>
+				<p class="dealPrice">Deal Price: {{this.offer_dealPrice}}</p>
+				<p class="offerimage">Offer Image URL: {{this.offer_image}}</p>
+				<p class="offerCreateAt">Created At: {{this.createdAt}}</p>
+				<p class="offerUpdateAt">Updated At: {{this.updatedAt}}</p>
+			</div>
+
+			{{/each}}
+		</div>
+	</div>
+
+{{!-- {{/each}} --}}
+{{/with}}

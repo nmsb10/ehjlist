@@ -1,0 +1,48 @@
+	{{#with business}}
+	<p>CREATE AN OFFER FORM</p>
+
+	{{!-- {{#each business}} --}}
+
+	<p>business id = {{id}}</p>
+
+	<form class="create-update-form" action="/api/offers/new/{{id}}" method="POST">
+		<div class="form-group">
+			<label for="name">deal title:</label>
+			<input type="text" id="name" name="title"><br>
+			<label for="original price">original price:</label>
+			<input type="text" id="desc" name="originalPrice"><br>
+			<label for="deal price">actual price:</label>
+			<input type="text" id="cat" name="dealPrice"><br>
+			<label for="image">image:</label>
+			<input type="text" id="image" name="image"><br>
+			<button id="submit" type="submit">Submit</button>
+		</div>
+	</form>
+
+	<div id="Businesses">
+		<h3>Business Info:</h3>
+
+		<h1>insert create offer form here</h1>
+
+		<div class="Businesses">
+			{{!-- {{#each business}} --}}
+
+				<div class="bizResult">
+					<p class="bizName">{{biz_name}}</p>
+					<p class="bizDesc">Description: {{biz_desc}}</p>
+					<p class="bizCat">Category: {{biz_cat}}</p>
+					<p class="bizimage">Image URL: {{biz_image}}</p>
+					<p class="bizstreet">Address: {{biz_street}}</p>
+					<p class="bizCity">City: {{biz_city}}</p>
+					<p class="bizState">State: {{biz_state}}</p>
+					<p class="bizLat">Geo Lat: {{biz_lat}}</p>
+					<p class="bizLong">Geo Long: {{biz_long}}</p>
+					<p class="bizCreateAt">Created At: {{createdAt}}</p>
+					<p class="bizUpdateAt">Updated At: {{updatedAt}}</p>
+				</div>
+
+		{{!-- {{/each}} --}}
+
+		</div>
+	</div>
+{{/with}}

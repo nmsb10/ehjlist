@@ -1,0 +1,804 @@
+#global-header {
+	background-color: green;
+},
+
+.sub-nav {
+	background-color: grey;
+}
+
+.bizResult {
+	background-color: beige;
+}
+
+.bizName {
+	color: blue;
+	font-weight: bold;
+},
+
+
+					
+.bizDesc {
+
+}
+		
+
+.offerName {
+	color: blue;
+	font-weight: bold;
+}
+	
+.offerResult {
+	background-color: beige;
+}
+
+/*START of css styles for j:
+======================================================*/
+body{
+	/*necessary so the header inline-block elements don't have white space between
+	but remember to specify font size wherever text appears*/
+	/*font-size: 0;
+	font-family: Arial, "Helvetica", "Helvetica Neue", sans-serif;
+	color: rgb(0, 0, 0);
+	padding:0;
+	border:0;
+	margin:0;
+    background-color: rgba(255, 255, 255, 1);*/
+}
+
+header{
+	width:100%;
+	padding:0;
+	border:0;
+	margin:0;
+}
+
+.fit-95{
+	width: 95%;
+	margin: 0 auto;
+}
+
+.fit-90{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#header-top{
+	display: inline-block;
+	width: 100%;
+	height:45px;
+	border-bottom: 1px solid rgba(80, 80, 80, 1);
+	background: rgba(50, 50, 50, 1); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(20, 20, 20, 1), rgba(55, 55, 55, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(20, 20, 20, 1), rgba(55, 55, 55, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(20, 20, 20, 1), rgba(55, 55, 55, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(20, 20, 20, 1), rgba(55, 55, 55, 1)); /* Standard syntax */
+}
+
+#header-top .fit-95{
+	min-width:600px;
+}
+
+#header-bottom{
+	width: 100%;
+	height:32px;
+	background-color: rgba(55, 55, 55, 1);
+	border-bottom: 2px solid rgba(80, 80, 80, 1);
+	box-shadow: 0 5px 11px 0 rgb(75, 75, 75);
+}
+
+#our-name{
+	cursor:default;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	margin-left:12px;
+	/*line-height same as height of parent to vertically center*/
+	line-height:45px;
+	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(150, 150, 150);
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+}
+
+#our-name-bottom{
+	position:fixed;
+	/*need to define width because position is fixed*/
+	right: 5px;
+	bottom: 55px;
+	width:120px;
+	height:50px;
+	/*line-height 40px because height 50px includes padding, so content height is actually 40px*/
+	line-height:40px;
+	padding:5px;
+	cursor:default;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(150, 150, 150);
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+	opacity: 0;
+}
+
+#our-name:hover{
+	color:lime;
+	text-shadow: 1px 1px 2px purple, 0 0 35px white, 0 0 15px purple;
+}
+
+#our-name-bottom:hover{
+	-webkit-animation: spin 1s ease 0s infinite; /* Safari and Chrome */
+    -moz-animation: spin 1s ease 0s infinite; /* Firefox */
+    -ms-animation: spin 1s ease 0s infinite; /* Internet Explorer */
+    -o-animation: spin 1s ease 0s infinite; /* Opera */
+    animation: spin 1s linear 0s infinite;
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes spin {
+    0% {opacity:1; }
+	100% { transform: rotate(360deg);opacity:1;}
+}
+
+/* Firefox */
+@-moz-keyframes spin {
+	0% {opacity:1; }
+	100% { transform: rotate(360deg);opacity:1;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes spin {
+	0% {opacity:1; }
+	100% { transform: rotate(360deg);opacity:1;}
+}
+
+/* Opera */
+@-o-keyframes spin {
+    0% {opacity:1; }
+	100% { transform: rotate(360deg);opacity:1;}
+}
+
+@keyframes spin {
+	0% {opacity:1; }
+	50% {color: red;}
+	100% { opacity:1;}
+}
+
+#search-container{
+	display: inline-block;
+	vertical-align:top;
+	margin: 7.5px 0 7.5px 50px;
+}
+
+#search-form-top{
+	width: 415px;
+	font-size:0;
+}
+
+.search-input{
+	/*it appears any width or height includes the padding*/
+	display: inline-block;
+	width: 190px;
+	height:30px;
+	font-size: 18px;
+	padding: 5px;
+	border:0;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.95);
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+#search-input-business-top{
+	border-radius: 5px 0 0 5px
+}
+
+#search-input-location{
+	border-left: 1px solid purple;
+}
+
+.search-input:hover{
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 0 11px 3px purple;
+}
+
+.search-input:focus {
+	/*default for input is for the blue or orange outline*/
+    outline:none;
+    box-shadow: 0 0 11px 3px purple;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#search-button{
+	/*height 30px because inputs are height 20px + 5px padding*/
+	height:30px;
+	vertical-align:top;
+	width:30px;
+	font-size:18px;
+	border:0;
+	border-left: 1px solid purple;
+	border-radius: 0 5px 5px 0;
+	background-color: rgba(255, 255, 255, 0.95);
+	-webkit-transition: background-color 2s ease 0s;
+	-moz-transition: background-color 2s ease 0s;
+	transition: background-color 2s ease 0s;
+}
+
+#search-button:hover{
+	background-color:lime;
+	-webkit-animation: rotatey 2s ease 0s infinite alternate; /* Safari and Chrome */
+    -moz-animation: rotatey 2s ease 0s infinite alternate; /* Firefox */
+    -ms-animation: rotatey 2s ease 0s infinite alternate; /* Internet Explorer */
+    -o-animation: rotatey 2s ease 0s infinite alternate; /* Opera */
+    animation: rotatey 2s ease 0s infinite alternate;
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes rotatey {
+    0% { }
+	100% { transform: rotateY(360deg);}
+}
+
+/* Firefox */
+@-moz-keyframes rotatey {
+    0% { }
+	100% { transform: rotateY(360deg);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rotatey {
+    0% { }
+	100% { transform: rotateY(360deg);}
+}
+
+/* Opera */
+@-o-keyframes rotatey {
+    0% { }
+	100% { transform: rotateY(360deg);}
+}
+
+@keyframes rotatey {
+	0% { }
+	100% { transform: rotateY(360deg);}
+}
+
+#admin-button{
+	font-size: 15px;
+	display:inline-block;
+	line-height:30px;
+	border-radius: 35% 0 35% 0;
+	padding: 0 8px;
+	width:41px;
+	opacity:0;
+	cursor: default;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+
+#admin-button:hover{
+	opacity: 1;
+	background-color: rgb(235, 235, 235);
+	color: rgb(0, 0, 0);
+	border-radius: 35% 0 0 0;
+	width: 111px;
+}
+
+.dropdown{
+	position:relative;
+}
+
+.dropdown-content{
+	/*content hidden by default*/
+	/*display: none;*/
+	/*except if want the dropdown-content to appear gradually, must make it always be display block instead*/
+	display:block;
+	position: absolute;
+	/*left 0 so left side of dropdown-content aligns with left side of dropdown*/
+	left: 0;
+	/*top:-31px;*/
+	opacity:0;
+	/*delay 0.75 second so admin-button can finish it's hover transition*/
+	-webkit-transition: all 0.5s ease 0.5s;
+	-moz-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;
+}
+
+.dropdown:hover .dropdown-content{
+/*	display: block;
+*/	opacity:1;
+	/*top:30px because dropdown is 30px height*/
+	/*top:30px;*/
+}
+
+.dropdown:hover a{
+	display:inline-block;
+}
+
+.dropdown-content a{
+	/*since dropdown-content is always display block to enable the transition, must make the a elements within only display inline-block upon dropdown hover*/
+	display:none;
+	cursor: pointer;
+	text-decoration: none;
+	font-size:15px;
+	width:111px;
+	padding: 0 8px;
+	color: rgb(15, 15, 15);
+	border-top: 1px solid purple;
+	background-color: rgb(235, 235, 235);
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.dropdown-content a:last-child{
+	border-radius: 0 0 35% 0;
+}
+
+.dropdown-content a:hover{
+	color:rgb(235, 235, 235);
+	background-color:rgb(15, 15, 15);
+}
+
+.dropdown-content button{
+	color: rgb(15, 15, 15);
+	background-color: rgb(235, 235, 235);
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.dropdown-content button:hover{
+	color:rgb(235, 235, 235);
+	background-color:rgb(15, 15, 15);
+}
+
+.bheader-form{
+	display: inline;
+	font-size: 0;
+}
+
+.main-nav-link{
+	/*in order to use z-index so the box-shadow appears in front on hover, make position: relative*/
+	position: relative;
+	z-index:1;
+	font-size: 17px;
+    border: 0;
+    margin: 0;
+    padding: 0 12px;
+    vertical-align: top;
+    line-height: 30px;
+    background-color: rgba(55, 55, 55, 1);
+    color: rgb(235, 235, 235);
+    border-radius: 7px;
+
+/*	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(150, 150, 150);
+*/	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.main-nav-link:hover{
+	z-index:2;
+	color: rgb(255, 255, 255);
+	background-color: rgba(10, 10, 10, 1);
+	text-shadow: 1px 1px 2px purple, 0 0 35px white, 0 0 15px purple;
+	box-shadow: 3px 3px 5px 0 rgb(200, 200, 200);
+}
+
+.create-newbizdeal-button{
+	padding:0;
+	border:0;
+}
+
+#eliminate-whitespace{
+	font-size:0;
+}
+
+#primary-business-info{
+	width:75%;
+	min-width: 600px;
+	padding-bottom:20px;
+	display:inline-block;
+}
+
+#business-name{
+	display: inline-block;
+	margin: 20px 0 15px;
+	font-size:35px;
+	color: rgb(25, 25, 25);
+	text-shadow: 1.5px 1.5px 2px rgb(100, 100, 100), 0 0 20px rgb(215, 215, 215);
+	text-transform: uppercase;
+	width:93%;
+	border-radius:5px;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+#business-name:hover{
+	background-color: rgb(55, 55, 55);
+	color: rgb(230, 230, 230);
+	text-shadow: 2px 2px 1px rgb(0, 0, 0), 3.5px 3.5px 2px rgb(100, 100, 100), 0 0 20px rgb(215, 215, 215);
+	box-shadow: 5px 5px 5px 0 rgb(165, 165, 165);
+}
+
+#business-image{
+	display: inline-block;
+	width: 45%;
+	min-width: 275px;
+	height: 250px;
+	border: 2px solid rgb(21, 21, 21);
+	margin-right: 3%;
+	margin-bottom:20px;
+	background-image: url('../images/jn_3516.JPG');
+	background-position: center center;
+	background-repeat: no-repeat;
+/*    background-attachment: fixed;
+*/    background-size: cover;
+    -webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+#business-image:hover{
+	border: 2px solid rgb(200, 200, 200);
+}
+
+#individual-business-map{
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	min-width: 275px;
+	height:250px;
+}
+
+#business-information{
+	display: inline-block;
+	vertical-align: top;
+	padding-right:10px;
+	width: 100%;
+	min-width:250px;
+}
+
+.business-attribute{
+	margin-bottom: 8px;
+}
+
+#transform-address{
+	text-transform: capitalize;
+}
+
+.business-create-update{
+	margin-bottom:2px;
+	opacity: 0.05;
+	color: black;
+	-webkit-transition: all 0.7s ease 0s;
+	-moz-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+}
+
+.business-create-update:hover{
+	opacity: 0.65;
+}
+
+#deal-container-ind{
+	display:inline-block;
+	width:25%;
+	min-width: 200px;
+	max-width:250px;
+	min-height: 450px;
+	vertical-align: top;
+	margin-top:20px;
+	font-size:20px;
+	color: black;
+	text-align:center;
+	border-radius:8px;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+#deal-container-ind:hover{
+	background-color: rgb(170, 8, 170);
+	color: rgb(230, 230, 230);
+	box-shadow: 3px 3px 5px 0 rgb(55, 55, 55);
+}
+
+#deal-container-head{
+	padding: 5px 0;
+	line-height:20px;
+}
+
+#bus-name-deals{
+	font-size: 25px;
+	line-height:35px;
+}
+
+.deal-panel{
+	width: 96%;
+	margin: 0 auto 20px;
+	display: inline-block;
+	border-radius: 0 0 5px 5px;
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+}
+
+.deal-panel:hover{
+	box-shadow:5px 5px 10px 0 rgb(55, 55, 55);
+}
+
+.deal-panel:hover .deal-panel-content{
+	border-color: lime;
+}
+
+/*.deal-panel:nth-child(3) {
+    margin-right: 0;
+}*/
+
+.deal-panel-header{
+/*	font-size: 25px;
+	padding: 8px 10px;
+	background-color: rgb(245, 245, 245);
+	color: rgb(15, 15, 15);
+	border:2px solid purple;
+	border-radius: 5px 5px 0 0;
+	margin:0;*/
+
+
+/*	display: inline-block;
+*//*	width: 45%;
+	min-width: 275px;*/
+	height: 200px;
+	background-image: url('../images/deal_image_06.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+/*    background-attachment: fixed;
+*/    background-size: cover;
+}
+
+.deal-panel-content{
+	text-align: center;
+	line-height:125%;
+	padding:5px;
+	background-color: rgb(245, 245, 245);
+	color: black;
+	border:1.2px solid rgb(55, 55, 55);
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	margin:0;
+	padding-bottom: 10px;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.deal-desc-div{
+	text-align: left;
+	vertical-align:bottom;
+	padding: 0 5px;
+}
+
+.reg-price{
+	margin-top: 5px;
+}
+
+.deal-label{
+	font-size: 15px;
+	text-align: left;
+}
+
+.deal-title-content{
+	font-weight:bold;
+	font-size:21px;
+}
+
+.dl-dealprice{
+	font-weight: bold;
+	font-size:17px;
+}
+
+.deal-dealprice-content{
+	color:lime;
+	font-size:23px;
+	text-shadow: 2px 2px 0 rgb(100, 100, 100), 2px 2px 3px rgb(55, 13, 55);
+}
+
+.dl-cu{
+	font-size:9px;
+	opacity: 0.03;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+	line-height: 80%;
+}
+
+.ddd-cu{
+	line-height:25%;
+}
+
+.ddd-cu:hover .dl-cu{
+	opacity: 0.5;
+}
+
+
+
+.deal-regprice-content{
+	text-decoration: line-through;
+}
+
+.limited-time-container{
+	position: relative;
+	top: 135px;
+	left: -5px;
+}
+
+.cornered-text{
+	display: inline-block;
+	z-index:2;
+	position: absolute;
+	top:0;
+	left: 0;
+	color: rgb(15, 15, 15);
+	text-align: left;
+	margin-left: 5px;
+}
+
+.cornered-text-days{
+	font-size: 38px;
+	line-height: 40px;
+	width:22px;
+}
+
+.cornered-text-words{
+	line-height:20px;
+	left: 27px;
+	font-size: 17px;
+}
+
+.cornered {
+	top:0;
+	border-radius: 3px 0 0 0;
+	border-bottom: 20px solid rgb(225, 225, 225);
+	border-right: 20px solid rgba(255, 255, 255, 0);
+	-webkit-animation: redblink 3s ease 0s infinite; /* Safari and Chrome */
+    -moz-animation: redblink 3s ease 0s infinite; /* Firefox */
+    -ms-animation: redblink 3s ease 0s infinite; /* Internet Explorer */
+    -o-animation: redblink 3s ease 0s infinite; /* Opera */
+    animation: redblink 3s ease 0s infinite;
+}
+
+.cornered2 {
+	top:20px;
+	border-radius: 0 0 0 3px;
+	border-top: 20px solid rgb(225, 225, 225);
+	border-right: 20px solid rgba(255, 255, 255, 0);
+	-webkit-animation: redblink 3s ease 0s infinite; /* Safari and Chrome */
+    -moz-animation: redblink 3s ease 0s infinite; /* Firefox */
+    -ms-animation: redblink 3s ease 0s infinite; /* Internet Explorer */
+    -o-animation: redblink 3s ease 0s infinite; /* Opera */
+    animation: redblink 3s ease 0s infinite;
+}
+
+.corner{
+	z-index:1;
+	position: absolute;
+	left: 0;
+	width:150px;
+	height:0;
+	opacity: 0.8;
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes redblink {
+    50% {border-top-color: red;border-bottom-color: red;}
+}
+
+/* Firefox */
+@-moz-keyframes redblink {
+	50% {border-top-color: red;border-bottom-color: red;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes redblink {
+	50% {border-top-color: red;border-bottom-color: red;}
+}
+
+/* Opera */
+@-o-keyframes redblink {
+    50% {border-top-color: red;border-bottom-color: red;}
+}
+
+@keyframes redblink {
+	50% {border-top-color: red;border-bottom-color: red;}
+}
+
+.desc-label{
+	font-size: 17px;
+	color: black;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.desc-label-cu{
+	font-size:10px;
+	margin-right:5px;
+}
+
+.desc-content{
+	font-size: 17px;
+	color: rgb(21, 21, 21);
+}
+
+.desc-content-cu{
+	font-size:9px;
+}
+
+.ind-business-action{
+	display: inline-block;
+	font-size:0;
+}
+
+.edit-business-info-button{
+	display: inline-block;
+	opacity:0.05;
+	cursor: pointer;
+	font-size:15px;
+	margin-right:10px;
+	padding:3px;
+	border : 1px solid purple;
+	background-color: rgb(245, 245, 245);
+	color: rgb(0, 0, 0);
+	border-radius: 5px;
+	vertical-align:text-bottom;
+	/*use box-sizing border-box so border is inside the div*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+}
+
+.edit-business-info-button:hover{
+	opacity:1;
+}
+
+.edit-business-info-button:active{
+	color: rgb(255, 255, 255);
+	background-color: purple;
+	border-color:lime;
+}
+
+footer{
+	text-align: center;
+	position:fixed;
+	/*need to define width because position is fixed*/
+	width: 100%;
+	top: 100%;
+	margin-top: -29.333px;
+    -webkit-transition: all 1s ease 0s;/* For Safari 3.1 to 6.0 */
+	-moz-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+}
+
+#footer-content{
+	font-size: 10px;
+	color: rgba(235, 235, 235, 0.75);
+	padding: 9px 0;
+	-webkit-transition: all 1s ease 0s;/* For Safari 3.1 to 6.0 */
+	-moz-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+}
+
+footer:hover{
+	background: rgba(250, 250, 250, 0.5);
+}
+
+footer:hover #footer-content{
+	color: rgba(0, 0, 0, 0.75);
+}
+/*END of css styles for j:
+======================================================*/
