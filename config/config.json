@@ -10,14 +10,14 @@
     "username": "x2vjnn05v316y4xj",
     "password": "c9c9e6f8hvrah1x6",
     "database": "u6temlzvx2ql6mmv",
-    "host": "127.0.0.1",
+    "host": "l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "x2vjnn05v316y4xj",
     "password": "c9c9e6f8hvrah1x6",
     "database": "u6temlzvx2ql6mmv",
-    "host": "127.0.0.1",
+    "host": "l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
